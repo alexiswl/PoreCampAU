@@ -8,7 +8,7 @@ mkdir -p ${SOURCE_DIR};
 
 # Downloading Anaconda
 cd ${SOURCE_DIR}
-wget https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86_64.sh
+wget https://repo.continuum.io/archive/Anaconda2-4.3.0-Linux-x86_64.sh 
 
 # Install Anaconda
 ANACONDA_DIR=${PROGRAMS_DIR}/anaconda2
