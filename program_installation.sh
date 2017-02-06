@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROGRAMS_DIR=$HOME/programs
-mdkir -p ${PROGRAMS_DIR};
+mkdir -p ${PROGRAMS_DIR};
 
 SOURCE_DIR=$HOME/src
 mkdir -p ${SOURCE_DIR};
