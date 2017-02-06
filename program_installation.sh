@@ -34,6 +34,9 @@ python -m ipykernel install --user
 # Install biopython
 conda install -c anaconda biopython=1.68 --yes
 
+# Install Onecodex command line
+pip install onecodex all
+
 # Install ete3 for NCBI Taxonomy database
 conda install -c etetoolkit ete3=3.0.0b36 --yes
 
