@@ -57,7 +57,7 @@ unzip fastqc*
 mv FastQC ${PROGRAMS_DIR}
 
 # Add FastQC to PATH
-PATH=$PATH:${PROGRAMS_DIR}/FastQC/
+PATH=$PATH:${PROGRAMS_DIR}/FastQC
 
 # Install Samtools
 conda install -c bioconda samtools=1.3.1 --yes
@@ -75,6 +75,7 @@ jupyter nbextension enable igv --py --user
 git clone https://github.com/arq5x/poretools
 cd poretools
 python setup.py install
+cd $HOME
 
 # Install bwa mem
 conda install -c bioconda bwa=0.7.15 --yes
@@ -88,7 +89,7 @@ conda install -c bioconda bamtools=2.4.0 --yes
 ### Do not install any programs past this line. ####
 
 # Write accumulated PATH and LD_LIBRARY_PATH to the bash profile
-echo "#!/bin/bash" > ~/.bash_profile
+echo "#!/bin/bash" >> ~/.bash_profile
 echo "export PATH=$PATH" >> ~/.bash_profile
 echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH" >> ~/.bash_profile
 echo "export R_HOME=$R_HOME" >> ~/.bash_profile
