@@ -54,6 +54,7 @@ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/researcher/anaconda2/jre/lib/amd64
 # Install FastQC
 wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.devel.zip
 unzip fastqc*
+chmod +x FastQC/fastqc
 mv FastQC ${PROGRAMS_DIR}
 
 # Add FastQC to PATH
