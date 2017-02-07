@@ -49,7 +49,7 @@ conda install -c cyclus java-jdk=8.45.14 --yes
 conda install -c anaconda javabridge=1.0.14 --yes
 
 # Update LD_LIBRARY_PATH for Java
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/researcher/anaconda2/jre/lib/amd64
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${ANACONDA_DIR}/jre/lib/amd64
 
 # Install FastQC
 wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.devel.zip
@@ -77,6 +77,12 @@ git clone https://github.com/arq5x/poretools
 cd poretools
 python setup.py install
 cd $HOME
+
+# Edit poretools to use matplotlib
+PORETOOLS_DIR="/home/researcher/programs/anaconda2/lib/python2.7/site-packages/poretools-0.6.0-py2.7.egg/poretools"
+perl -p -i -e "s/^\#matplotlib/matplotlib/" ${PORETOOLS_DIR}/hist.py
+perl -p -i -e "s/^\#matplotlib/matplotlib/" ${PORETOOLS_DIR}/yield.py
+perl -p -i -e "s/^\#matplotlib/matplotlib/" ${PORETOOLS_DIR}/hist.py
 
 # Install bwa mem
 conda install -c bioconda bwa=0.7.15 --yes
