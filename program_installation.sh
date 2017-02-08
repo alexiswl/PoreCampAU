@@ -51,6 +51,9 @@ conda install -c anaconda javabridge=1.0.14 --yes
 # Update LD_LIBRARY_PATH for Java
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${ANACONDA_DIR}/jre/lib/amd64
 
+# Set the Java home
+JAVA_HOME=${ANACONDA_DIR}/jre
+
 # Install FastQC
 wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.6.devel.zip
 unzip fastqc*
