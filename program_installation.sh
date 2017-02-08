@@ -84,8 +84,7 @@ cd $HOME
 # Edit poretools to use matplotlib
 PORETOOLS_DIR="/home/researcher/programs/anaconda2/lib/python2.7/site-packages/poretools-0.6.0-py2.7.egg/poretools"
 perl -p -i -e "s/^\#matplotlib/matplotlib/" ${PORETOOLS_DIR}/hist.py
-perl -p -i -e "s/^\#matplotlib/matplotlib/" ${PORETOOLS_DIR}/yield.py
-perl -p -i -e "s/^\#matplotlib/matplotlib/" ${PORETOOLS_DIR}/hist.py
+perl -p -i -e "s/^\#matplotlib/matplotlib/" ${PORETOOLS_DIR}/yield_plot.py
 
 # Install bwa mem
 conda install -c bioconda bwa=0.7.15 --yes
