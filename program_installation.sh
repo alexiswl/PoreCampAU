@@ -93,6 +93,14 @@ conda install -c bioconda bedtools=2.26.0 --yes
 # Install bamtools
 conda install -c bioconda bamtools=2.4.0 --yes
 
+# Install Krona
+cd ${SOURCE_DIR}
+git clone https://github.com/marbl/Krona/
+cd krona/KronaTools/
+./install.pl --prefix=${PROGRAMS_DIR}/krona
+PATH=$PATH:/${PROGRAMS_DIR}/krona/bin
+cd $HOME
+
 ### Do not install any programs past this line. ####
 
 # Write accumulated PATH and LD_LIBRARY_PATH to the bash profile
@@ -100,4 +108,4 @@ echo "#!/bin/bash" >> ~/.bash_profile
 echo "export PATH=$PATH" >> ~/.bash_profile
 echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH" >> ~/.bash_profile
 echo "export R_HOME=$R_HOME" >> ~/.bash_profile
-echo "export JAVA_HOME=$JAVA_HOME >> ~/.bash_profile"
+echo "export JAVA_HOME=$JAVA_HOME" >> ~/.bash_profile
