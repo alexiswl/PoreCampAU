@@ -98,7 +98,7 @@ cd ${SOURCE_DIR}
 git clone https://github.com/marbl/Krona/
 cd Krona/KronaTools/
 ./install.pl --prefix=${PROGRAMS_DIR}/krona
-PATH=$PATH:/${PROGRAMS_DIR}/krona/bin
+PATH=$PATH:${PROGRAMS_DIR}/krona/bin
 cd $HOME
 
 ### Do not install any programs past this line. ####
