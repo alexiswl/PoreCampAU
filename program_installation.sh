@@ -96,7 +96,7 @@ conda install -c bioconda bamtools=2.4.0 --yes
 # Install Krona
 cd ${SOURCE_DIR}
 git clone https://github.com/marbl/Krona/
-cd krona/KronaTools/
+cd Krona/KronaTools/
 ./install.pl --prefix=${PROGRAMS_DIR}/krona
 PATH=$PATH:/${PROGRAMS_DIR}/krona/bin
 cd $HOME
