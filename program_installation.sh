@@ -111,3 +111,5 @@ echo "export PATH=$PATH" >> ~/.bash_profile
 echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH" >> ~/.bash_profile
 echo "export R_HOME=$R_HOME" >> ~/.bash_profile
 echo "export JAVA_HOME=$JAVA_HOME" >> ~/.bash_profile
+
+source ~/.bash_profile
